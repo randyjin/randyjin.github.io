@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="guava,Lists,坑," />
+  <meta name="keywords" content="iterm快捷键," />
 
 
 
@@ -98,37 +98,46 @@
 
 
 
-<meta name="description" content="google的guava提供了很方便的操作，特别是集合操作；但今天遇到了个神坑，看了源码才搞定，这里通过源码来分享下；
-
-经过
-项目里的代码将PO List转成DTO List，这个时候是通过Lists的transform方法来做的
-但是DTO还需要其他属性来丰富，这个时候，通过for循环将其他的一些属性设置到DTO List的对象中去
-结果，没设置进去
-开发大杀器（debug）上，断点到for">
+<meta name="description" content="ctrl+a/e：到行首/行尾
+ctrl+f/b：前进/后退
+ctrl+d/h：删除字符（前面or后面）
+ctrl+p：前一条命令
+ctrl+n：下一条命令
+ctrl+r：查看历史命令，类似history
+ctrl+k：从光标删除到行尾
+Ctrl+w：删除从光标位置前到当前所处单词（Word）的开头
+Ctrl+y：粘贴最后一次被删除的单词
+command+t：新增标签
+command+w：关闭当">
 <meta property="og:type" content="article">
-<meta property="og:title" content="guava 源码之 Lists transform的坑">
-<meta property="og:url" content="http://yoursite.com/2016/11/14/guava-transform/index.html">
+<meta property="og:title" content="我的mac下iterm实用快捷键">
+<meta property="og:url" content="http://yoursite.com/2016/11/17/iterm-key/index.html">
 <meta property="og:site_name" content="阿骨打">
-<meta property="og:description" content="google的guava提供了很方便的操作，特别是集合操作；但今天遇到了个神坑，看了源码才搞定，这里通过源码来分享下；
-
-经过
-项目里的代码将PO List转成DTO List，这个时候是通过Lists的transform方法来做的
-但是DTO还需要其他属性来丰富，这个时候，通过for循环将其他的一些属性设置到DTO List的对象中去
-结果，没设置进去
-开发大杀器（debug）上，断点到for">
-<meta property="og:image" content="http://yoursite.com/images/WechatIMG1.jpeg">
-<meta property="og:image" content="http://yoursite.com/images/WechatIMG2.jpeg">
-<meta property="og:updated_time" content="2016-11-14T15:38:57.000Z">
+<meta property="og:description" content="ctrl+a/e：到行首/行尾
+ctrl+f/b：前进/后退
+ctrl+d/h：删除字符（前面or后面）
+ctrl+p：前一条命令
+ctrl+n：下一条命令
+ctrl+r：查看历史命令，类似history
+ctrl+k：从光标删除到行尾
+Ctrl+w：删除从光标位置前到当前所处单词（Word）的开头
+Ctrl+y：粘贴最后一次被删除的单词
+command+t：新增标签
+command+w：关闭当">
+<meta property="og:updated_time" content="2016-11-17T14:12:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guava 源码之 Lists transform的坑">
-<meta name="twitter:description" content="google的guava提供了很方便的操作，特别是集合操作；但今天遇到了个神坑，看了源码才搞定，这里通过源码来分享下；
-
-经过
-项目里的代码将PO List转成DTO List，这个时候是通过Lists的transform方法来做的
-但是DTO还需要其他属性来丰富，这个时候，通过for循环将其他的一些属性设置到DTO List的对象中去
-结果，没设置进去
-开发大杀器（debug）上，断点到for">
-<meta name="twitter:image" content="http://yoursite.com/images/WechatIMG1.jpeg">
+<meta name="twitter:title" content="我的mac下iterm实用快捷键">
+<meta name="twitter:description" content="ctrl+a/e：到行首/行尾
+ctrl+f/b：前进/后退
+ctrl+d/h：删除字符（前面or后面）
+ctrl+p：前一条命令
+ctrl+n：下一条命令
+ctrl+r：查看历史命令，类似history
+ctrl+k：从光标删除到行尾
+Ctrl+w：删除从光标位置前到当前所处单词（Word）的开头
+Ctrl+y：粘贴最后一次被删除的单词
+command+t：新增标签
+command+w：关闭当">
 
 
 
@@ -149,10 +158,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/14/guava-transform/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/17/iterm-key/"/>
 
 
-  <title> guava 源码之 Lists transform的坑 | 阿骨打 </title>
+  <title> 我的mac下iterm实用快捷键 | 阿骨打 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -302,7 +311,7 @@
             
             
               
-                guava 源码之 Lists transform的坑
+                我的mac下iterm实用快捷键
               
             
           </h1>
@@ -314,8 +323,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-14T23:05:11+08:00" content="2016-11-14">
-              2016-11-14
+            <time itemprop="dateCreated" datetime="2016-11-17T22:00:53+08:00" content="2016-11-17">
+              2016-11-17
             </time>
           </span>
 
@@ -328,8 +337,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/guava/" itemprop="url" rel="index">
-                    <span itemprop="name">guava</span>
+                  <a href="/categories/快捷键/" itemprop="url" rel="index">
+                    <span itemprop="name">快捷键</span>
                   </a>
                 </span>
 
@@ -344,8 +353,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/14/guava-transform/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/14/guava-transform/" itemprop="commentsCount"></span>
+                <a href="/2016/11/17/iterm-key/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/17/iterm-key/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -368,26 +377,26 @@
       
 
       
-        <blockquote>
-<p>google的guava提供了很方便的操作，特别是集合操作；<br>但今天遇到了个神坑，看了源码才搞定，这里通过源码来分享下；</p>
-</blockquote>
-<h2 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h2><ul>
-<li>项目里的代码将PO List转成DTO List，这个时候是通过Lists的transform方法来做的</li>
-<li>但是DTO还需要其他属性来丰富，这个时候，通过for循环将其他的一些属性设置到DTO List的对象中去</li>
-<li>结果，没设置进去</li>
-<li>开发大杀器（debug）上，断点到for<code>for(DTO dto : dtoList)</code>循环里，在for循环代码块里发现一个比较奇特的现象，dto的数据变了，但dtoList里的数据没变</li>
-<li>想想没道理呀，这两货不是同一个引用吗，怎么会出现这种情况呢？</li>
-<li>然后开始怀疑人生，找了帮手一起看了下，也看不出来，后来，帮手提醒了一句：看看对象的地址是什么</li>
-<li>这个时候开始发现，debug的时候，每次鼠标放到dtoList上的时候，这个List里边的元素的对象地址一直在变</li>
-<li>找到原因了就好办了，一步一步debug，最终发现问题出在了Lists.transform上了</li>
-</ul>
-<h2 id="源码解析"><a href="#源码解析" class="headerlink" title="源码解析"></a>源码解析</h2><h3 id="下边是一个比较简单的demo"><a href="#下边是一个比较简单的demo" class="headerlink" title="下边是一个比较简单的demo"></a>下边是一个比较简单的demo</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">List&lt;Integer&gt; intList = Lists.newArrayList(<span class="number">1000000</span>, <span class="number">200000</span>);</div><div class="line">List&lt;Integer&gt; intList1 = Lists.transform(intList, <span class="keyword">new</span> Function&lt;Integer, Integer&gt;() &#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">apply</span><span class="params">(Integer input)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> input + <span class="number">100000000</span>;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">intList1.get(<span class="number">0</span>);</div></pre></td></tr></table></figure>
-<p>代码比较简单，就是对intList加工后返回intList1；<br>这个时候debug断点打到<code>intList1.get(0);</code>这行，然后用鼠标上浮的方式查看intList1里边的元素的地址<br>下边是两次鼠标放上去看的内存地址<br><img src="/images/WechatIMG1.jpeg" alt="Alt text"><br><img src="/images/WechatIMG2.jpeg" alt="Alt text"></p>
-<p>从截图中可以看出，这个List的真实类型为<code>TransformingRandomAccessList</code>，这个List有什么特殊呢<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TransformingRandomAccessList</span>&lt;<span class="title">F</span>, <span class="title">T</span>&gt; <span class="keyword">extends</span> <span class="title">AbstractList</span>&lt;<span class="title">T</span>&gt;</span></div><div class="line">      <span class="keyword">implements</span> <span class="title">RandomAccess</span>, <span class="title">Serializable</span> &#123;</div><div class="line">    <span class="keyword">final</span> List&lt;F&gt; fromList;</div><div class="line">    <span class="keyword">final</span> Function&lt;? <span class="keyword">super</span> F, ? extends T&gt; function;</div><div class="line"></div><div class="line">    TransformingRandomAccessList(List&lt;F&gt; fromList, Function&lt;? <span class="keyword">super</span> F, ? extends T&gt; function) &#123;</div><div class="line">      <span class="keyword">this</span>.fromList = checkNotNull(fromList);</div><div class="line">      <span class="keyword">this</span>.function = checkNotNull(function);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> </span>&#123;</div><div class="line">      fromList.clear();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">get</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> function.apply(fromList.get(index));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Iterator&lt;T&gt; <span class="title">iterator</span><span class="params">()</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> listIterator();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ListIterator&lt;T&gt; <span class="title">listIterator</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> TransformedListIterator&lt;F, T&gt;(fromList.listIterator(index)) &#123;</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function">T <span class="title">transform</span><span class="params">(F from)</span> </span>&#123;</div><div class="line">          <span class="keyword">return</span> function.apply(from);</div><div class="line">        &#125;</div><div class="line">      &#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> fromList.isEmpty();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">remove</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> function.apply(fromList.remove(index));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> fromList.size();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>看到源码就明白了，每次<code>get</code>或<code>iterator</code>都会从新调用<code>function.apply</code>方法，而上边的function的apply方法是<code>return input + 100000000;</code>重新new了对象来返回，我在项目的代码里也是重新new了DTO来返回的；<br>到这里所有的都明白了；</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>Lists的transform是挺好用的，但是只适合不对transform后的List的元素做丰富属性的操作；如果非要用，那么在循环List的时候，重新把元素add到新的List中，然后返回新的List，但这种做法太别扭了；transform的方法还是考虑场景慎用吧</li>
-<li>不知道这是guava故意这么做的还是真的是个坑，个人还没有get到这么做的意图</li>
+        <ul>
+<li>ctrl+a/e：到行首/行尾</li>
+<li>ctrl+f/b：前进/后退</li>
+<li>ctrl+d/h：删除字符（前面or后面）</li>
+<li>ctrl+p：前一条命令</li>
+<li>ctrl+n：下一条命令</li>
+<li>ctrl+r：查看历史命令，类似history</li>
+<li>ctrl+k：从光标删除到行尾</li>
+<li>Ctrl+w：删除从光标位置前到当前所处单词（Word）的开头</li>
+<li>Ctrl+y：粘贴最后一次被删除的单词</li>
+<li>command+t：新增标签</li>
+<li>command+w：关闭当前标签</li>
+<li>command+n：新增窗口</li>
+<li>command+数字 command+箭头：切换tab</li>
+<li>command+f：查找</li>
+<li>command+enter：全屏/缩小</li>
+<li>command+d：分屏（竖屏）</li>
+<li>command+shift+d：分屏（横屏）</li>
+<li>command+option+箭头 command+[/]：切屏</li>
+<li>command+shift+h：查看历史剪贴板itermkey</li>
 </ul>
 
       
@@ -427,11 +436,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/guava/" rel="tag">#guava</a>
-          
-            <a href="/tags/Lists/" rel="tag">#Lists</a>
-          
-            <a href="/tags/坑/" rel="tag">#坑</a>
+            <a href="/tags/iterm快捷键/" rel="tag">#iterm快捷键</a>
           
         </div>
       
@@ -440,17 +445,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/08/joda-collection/" rel="next" title="joda-collection 之 Grid解析">
-                <i class="fa fa-chevron-left"></i> joda-collection 之 Grid解析
+              <a href="/2016/11/14/guava-transform/" rel="next" title="guava 源码之 Lists transform的坑">
+                <i class="fa fa-chevron-left"></i> guava 源码之 Lists transform的坑
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/17/iterm-key/" rel="prev" title="我的mac下iterm实用快捷键">
-                我的mac下iterm实用快捷键 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -465,10 +466,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/11/14/guava-transform/"
-     data-title="guava 源码之 Lists transform的坑"
+        <div class="ds-share flat" data-thread-key="2016/11/17/iterm-key/"
+     data-title="我的mac下iterm实用快捷键"
      data-content=""
-     data-url="http://yoursite.com/2016/11/14/guava-transform/">
+     data-url="http://yoursite.com/2016/11/17/iterm-key/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -495,8 +496,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/14/guava-transform/"
-           data-title="guava 源码之 Lists transform的坑" data-url="http://yoursite.com/2016/11/14/guava-transform/">
+      <div class="ds-thread" data-thread-key="2016/11/17/iterm-key/"
+           data-title="我的mac下iterm实用快捷键" data-url="http://yoursite.com/2016/11/17/iterm-key/">
       </div>
     
   </div>
@@ -628,7 +629,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#经过"><span class="nav-number">1.</span> <span class="nav-text">经过</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码解析"><span class="nav-number">2.</span> <span class="nav-text">源码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下边是一个比较简单的demo"><span class="nav-number">2.1.</span> <span class="nav-text">下边是一个比较简单的demo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
