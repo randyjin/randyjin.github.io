@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-13T01:22:47.000Z</updated>
+  <updated>2016-12-13T01:33:18.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,40 +20,19 @@
     <link href="http://yoursite.com/2016/12/13/java-regex/"/>
     <id>http://yoursite.com/2016/12/13/java-regex/</id>
     <published>2016-12-13T01:21:39.000Z</published>
-    <updated>2016-12-13T01:22:47.000Z</updated>
+    <updated>2016-12-13T01:33:18.000Z</updated>
     
-    <content type="html"><![CDATA[<ul>
-<li>ctrl+a/e：到行首/行尾</li>
-<li>ctrl+f/b：前进/后退</li>
-<li>ctrl+d/h：删除字符（前面or后面）</li>
-<li>ctrl+p：前一条命令</li>
-<li>ctrl+n：下一条命令</li>
-<li>ctrl+r：查看历史命令，类似history</li>
-<li>ctrl+k：从光标删除到行尾</li>
-<li>Ctrl+w：删除从光标位置前到当前所处单词（Word）的开头</li>
-<li>Ctrl+y：粘贴最后一次被删除的单词</li>
-<li>command+t：新增标签</li>
-<li>command+w：关闭当前标签</li>
-<li>command+n：新增窗口</li>
-<li>command+数字 command+箭头：切换tab</li>
-<li>command+f：查找</li>
-<li>command+enter：全屏/缩小</li>
-<li>command+d：分屏（竖屏）</li>
-<li>command+shift+d：分屏（横屏）</li>
-<li>command+option+箭头 command+[/]：切屏</li>
-<li>command+shift+h：查看历史剪贴板itermkey</li>
-</ul>
-]]></content>
+    <content type="html"><![CDATA[<blockquote>
+<p>正则表达式是一个比较好用的工具，但其比较难编写，特别是对于新手来说，更是觉得难写；<br>平时对一些常用的正则做个记录也是个不错的选择，需要用的时候直接拿来用</p>
+</blockquote>
+<h2 id="比较常用的语法及demo"><a href="#比较常用的语法及demo" class="headerlink" title="比较常用的语法及demo"></a>比较常用的语法及demo</h2>]]></content>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;ctrl+a/e：到行首/行尾&lt;/li&gt;
-&lt;li&gt;ctrl+f/b：前进/后退&lt;/li&gt;
-&lt;li&gt;ctrl+d/h：删除字符（前面or后面）&lt;/li&gt;
-&lt;li&gt;ctrl+p：前一条命令&lt;/li&gt;
-&lt;li&gt;ctrl+n：下一条命令&lt;/li&gt;
-&lt;li&gt;ctrl+r：
+      &lt;blockquote&gt;
+&lt;p&gt;正则表达式是一个比较好用的工具，但其比较难编写，特别是对于新手来说，更是觉得难写；&lt;br&gt;平时对一些常用的正则做个记录也是个不错的选择，需要用的时候直接拿来用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;比较常用的语法及demo&quot;&gt;&lt;a h
     
     </summary>
     
