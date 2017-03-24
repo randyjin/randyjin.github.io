@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-24T01:33:24.000Z</updated>
+  <updated>2017-03-24T01:35:26.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/23/java-Arrays-asList/"/>
     <id>http://yoursite.com/2017/03/23/java-Arrays-asList/</id>
     <published>2017-03-23T11:43:06.000Z</published>
-    <updated>2017-03-24T01:33:24.000Z</updated>
+    <updated>2017-03-24T01:35:26.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="java-Arrays-asList"><a href="#java-Arrays-asList" class="headerlink" title="java Arrays.asList"></a>java Arrays.asList</h2><blockquote>
 <p><code>Arrays.asList</code>相信搞java的基本都用过，但有些坑不一定踩过</p>
@@ -33,9 +33,8 @@
 <p>原来<code>Arrays.asList</code>调用以后生成的<code>ArrayList</code>其实是<code>Arrays</code>的内部类对象，这个类继承了<code>AbstractList</code>，这个List的抽象类对get和remove方法都是需要子类自己实现的，来看看<code>AbstractList</code>的add和remove方法的代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> E <span class="title">remove</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</div><div class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> index, E element)</span> </span>&#123;</div><div class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> </span>&#123;</div><div class="line">    add(size(), e);</div><div class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>看到这里就明白了；具体这个ArrayList能做哪些操作，看看他提供出来的API就行了</p>
 <h3 id="坑二"><a href="#坑二" class="headerlink" title="坑二"></a>坑二</h3><ul>
-<li>Arrays.asList传入参数是基本类型的话，会把数组当做一个元素，看debug结果：</li>
+<li>Arrays.asList传入参数是基本类型的话，会把数组当做一个元素，看debug结果：<br><img src="/images/WechatIMG2.jpeg" alt="Alt text"><br><img src="/images/WX20170324.jpeg" alt="Alt text"></li>
 </ul>
-<p><img src="/images/WX20170324.jpeg" alt="Alt text"></p>
 ]]></content>
     
     <summary type="html">
