@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-24T02:19:28.000Z</updated>
+  <updated>2017-03-30T02:23:35.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>收藏的url</title>
+    <link href="http://yoursite.com/2017/03/30/favourite-url/"/>
+    <id>http://yoursite.com/2017/03/30/favourite-url/</id>
+    <published>2017-03-30T02:21:55.000Z</published>
+    <updated>2017-03-30T02:23:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="web相关"><a href="#web相关" class="headerlink" title="web相关"></a>web相关</h3><ul>
+<li><a href="https://mp.weixin.qq.com/s/rvWY5rIoYib_wDUtXByFIw" target="_blank" rel="external">干掉状态：从session到token</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;web相关&quot;&gt;&lt;a href=&quot;#web相关&quot; class=&quot;headerlink&quot; title=&quot;web相关&quot;&gt;&lt;/a&gt;web相关&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/rvWY5rIoYib_wDUt
+    
+    </summary>
+    
+      <category term="收藏的url" scheme="http://yoursite.com/categories/%E6%94%B6%E8%97%8F%E7%9A%84url/"/>
+    
+    
+      <category term="收藏的url" scheme="http://yoursite.com/tags/%E6%94%B6%E8%97%8F%E7%9A%84url/"/>
+    
+  </entry>
   
   <entry>
     <title>java使用Arrays asList需要注意了</title>
