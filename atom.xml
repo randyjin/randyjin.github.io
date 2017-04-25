@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-30T02:23:35.000Z</updated>
+  <updated>2017-04-25T08:40:55.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MAC操作</title>
+    <link href="http://yoursite.com/2017/04/25/mac-tools0/"/>
+    <id>http://yoursite.com/2017/04/25/mac-tools0/</id>
+    <published>2017-04-25T08:39:18.000Z</published>
+    <updated>2017-04-25T08:40:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>越来越多的开发都用mac</p>
+</blockquote>
+<ul>
+<li>在terminal的某个文件夹下，需要打开Finder，请输入<code>open .</code>，Finder就打开了，是不是很方便了</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;越来越多的开发都用mac&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在terminal的某个文件夹下，需要打开Finder，请输入&lt;code&gt;open .&lt;/code&gt;，Finder就打开了，是不是很方便了&lt;/li&gt;
+&lt;/ul&gt;
+
+    
+    </summary>
+    
+    
+      <category term="mac操作" scheme="http://yoursite.com/tags/mac%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>收藏的url</title>
