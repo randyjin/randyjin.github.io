@@ -283,6 +283,159 @@
             
               
                 
+                <a class="post-title-link" href="/2017/05/04/git-storage/" itemprop="url">
+                  git的存储机制
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-04T19:27:44+08:00" content="2017-05-04">
+              2017-05-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/04/git-storage/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/04/git-storage/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>现在项目基本都采用git来进行版本控制，最近比较好奇git的存储机制到底是怎么样的，研究了一下</p>
+</blockquote>
+<h3 id="简单介绍git最重要的算法（SHA-1）"><a href="#简单介绍git最重要的算法（SHA-1）" class="headerlink" title="简单介绍git最重要的算法（SHA-1）"></a>简单介绍git最重要的算法（SHA-1）</h3><ul>
+<li>通过<strong>git log</strong>查看，会发现都会有一个40个字符组成的字符串,这个字符串是通过SHA-1算法计算出来的字符串</li>
+<li>SHA-1算法：两个不同的内容进行计算出来的值（消息摘要）理论上来说是不重复的（基于目前来说）</li>
+</ul>
+<h3 id="git的存储机制详解"><a href="#git的存储机制详解" class="headerlink" title="git的存储机制详解"></a>git的存储机制详解</h3><ul>
+<li>先介绍下git的一个命令：<strong>git cat-file</strong>，查看消息摘要的详细内容；用的时候经常会带上 <strong>-p</strong> 参数</li>
+<li><p>研究过程(基于我本地的一个版本库)</p>
+<ul>
+<li><p>先通过 <strong>git log</strong> 找到一个commitId，通过 <strong>git cat-file</strong> 查看 <code>git cat-file -p 71d8f2a8aecfc84b2a72814f525c76c128face53</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tree b346468f50d856cc0a6089e4fe260b4f72c914e5</div><div class="line">parent 5987828df851c3d93775e8a1eb49b8d709fd1fb5</div><div class="line">author xx &lt;xxx&gt; 1489540261 +0800</div><div class="line">committer xxx &lt;xxx&gt; 1489540267 +0800</div></pre></td></tr></table></figure>
+</li>
+<li><p>从这里看出来一个 <strong>commit</strong> 指向一个 <strong>tree</strong> （一个tree管理一些tree和一些blob），接下来继续看这个tree到底是什么</p>
+</li>
+<li><p>继续 <strong>git cat-file</strong> ：<code>git cat-file -p b346468f50d856cc0a6089e4fe260b4f72c914e5</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">100644 blob e1b5186c600616e89692c94f64f4ed2e525fab23	.gitignore</div><div class="line">100644 blob 2572cca5762d11828c4a296bcca7ded879f4929a	LICENSE</div><div class="line">100644 blob 7ba68141ca2199ab83d3160f700d0e4343298468	README.md</div><div class="line">100644 blob ac8522fb58c89951af0089cb090a56f9856c05b0	a.txt</div><div class="line">100644 blob 9b285c5c555323213ce7865e536d09e597268706	pom.xml</div><div class="line">040000 tree 5165230a25966bca6377f32f80750b0640a9de02	src</div></pre></td></tr></table></figure>
+</li>
+<li><p>上边的结果有blob和tree：这个时候blob通常是一个文件，tree是一个目录</p>
+<ul>
+<li><p>那先来看看blob类型：<code>git cat-file -p e1b5186c600616e89692c94f64f4ed2e525fab23</code>，这个时候看到的是一个文件的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">*.class</div><div class="line">target/</div><div class="line">java-common-utils.iml</div><div class="line">.idea/</div></pre></td></tr></table></figure>
+<p>为什么是这样的呢，因为git通过e1b5186c600616e89692c94f64f4ed2e525fab23指向了.gitignore文件，而这个文件的内容被压缩成另一个文件，这些文件保存在项目的.git目录下的objects目录下，git的cat-file命令将blob还原成原有的文件内容了。网上有压缩的<a href="http://gitbook.liuhui998.com/8_1.html" target="_blank" rel="external">算法</a></p>
+</li>
+<li><p>再来看看tree类型：<code>git cat-file -p 5165230a25966bca6377f32f80750b0640a9de02</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">040000 tree 857c7710f03f0b9d33d3110273f525416ee310a6	main</div><div class="line">040000 tree b63ccc7fa9ced1d7b84fd5de194a85fe66016bec	test</div></pre></td></tr></table></figure>
+<p>可以看到还是两个tree，可以一直cat-file下去知道没有tree</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/04/25/mac-operate/" itemprop="url">
                   MAC操作
                 </a>
@@ -1609,7 +1762,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1617,7 +1770,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1626,7 +1779,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
