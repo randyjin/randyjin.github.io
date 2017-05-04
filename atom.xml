@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-25T08:40:55.000Z</updated>
+  <updated>2017-05-04T08:33:33.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   
   <entry>
     <title>MAC操作</title>
-    <link href="http://yoursite.com/2017/04/25/mac-tools0/"/>
-    <id>http://yoursite.com/2017/04/25/mac-tools0/</id>
+    <link href="http://yoursite.com/2017/04/25/mac-operate/"/>
+    <id>http://yoursite.com/2017/04/25/mac-operate/</id>
     <published>2017-04-25T08:39:18.000Z</published>
-    <updated>2017-04-25T08:40:55.000Z</updated>
+    <updated>2017-05-04T08:33:33.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>越来越多的开发都用mac</p>
+<p>越来越多的开发都用MAC，记录实用的操作技巧</p>
 </blockquote>
 <ul>
 <li>在terminal的某个文件夹下，需要打开Finder，请输入<code>open .</code>，Finder就打开了，是不是很方便了</li>
@@ -33,17 +33,17 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;越来越多的开发都用mac&lt;/p&gt;
+&lt;p&gt;越来越多的开发都用MAC，记录实用的操作技巧&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;在terminal的某个文件夹下，需要打开Finder，请输入&lt;code&gt;open .&lt;/code&gt;，Finder就打开了，是不是很方便了&lt;/li&gt;
-&lt;/ul&gt;
-
     
     </summary>
     
+      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
     
-      <category term="mac操作" scheme="http://yoursite.com/tags/mac%E6%93%8D%E4%BD%9C/"/>
+    
+      <category term="MAC操作" scheme="http://yoursite.com/tags/MAC%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
@@ -78,7 +78,7 @@
     <link href="http://yoursite.com/2017/03/23/java-Arrays-asList/"/>
     <id>http://yoursite.com/2017/03/23/java-Arrays-asList/</id>
     <published>2017-03-23T11:43:06.000Z</published>
-    <updated>2017-03-24T02:19:28.000Z</updated>
+    <updated>2017-05-04T08:34:02.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="java-Arrays-asList"><a href="#java-Arrays-asList" class="headerlink" title="java Arrays.asList"></a>java Arrays.asList</h2><blockquote>
 <p><code>Arrays.asList</code>相信搞java的基本都用过，但有些坑不一定踩过</p>
@@ -101,7 +101,7 @@
     
     </summary>
     
-      <category term="java坑" scheme="http://yoursite.com/categories/java%E5%9D%91/"/>
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
     
     
       <category term="java Arrays.asList" scheme="http://yoursite.com/tags/java-Arrays-asList/"/>
@@ -113,7 +113,7 @@
     <link href="http://yoursite.com/2017/01/04/vi-op/"/>
     <id>http://yoursite.com/2017/01/04/vi-op/</id>
     <published>2017-01-04T14:17:28.000Z</published>
-    <updated>2017-01-04T14:24:36.000Z</updated>
+    <updated>2017-05-04T08:34:57.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>很多时候需要用到vim，特别是查日志，学习一些常用的vim技巧还是很有必要的</p>
@@ -196,7 +196,7 @@
     <link href="http://yoursite.com/2016/12/14/mac-tools/"/>
     <id>http://yoursite.com/2016/12/14/mac-tools/</id>
     <published>2016-12-13T16:24:04.000Z</published>
-    <updated>2017-03-07T01:55:57.000Z</updated>
+    <updated>2017-05-04T08:32:43.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>越来越多的开发都用mac</p>
@@ -255,7 +255,7 @@
     
     </summary>
     
-      <category term="mac工具软件" scheme="http://yoursite.com/categories/mac%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
     
     
       <category term="mac工具软件" scheme="http://yoursite.com/tags/mac%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
@@ -267,7 +267,7 @@
     <link href="http://yoursite.com/2016/12/13/java-regex/"/>
     <id>http://yoursite.com/2016/12/13/java-regex/</id>
     <published>2016-12-13T01:21:39.000Z</published>
-    <updated>2016-12-14T14:08:58.000Z</updated>
+    <updated>2017-05-04T08:34:29.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>正则表达式是一个比较好用的工具，但其比较难编写，特别是对于新手来说，更是觉得难写；<br>平时对一些常用的正则做个记录也是个不错的选择，需要用的时候直接拿来用;<br>下边的匹配在java代码中通常会需要<code>\\</code>来对<code>\</code>进行转义，比如<code>\w</code>在java代码中应该需要写成<code>\\w</code></p>
@@ -302,9 +302,7 @@
 <li><code>()</code>:括号来表示分组,如<code>((010)|(020))+</code>能匹配<code>010010...</code>或<code>020020...</code>或者<code>010020...</code>或者<code>020010...</code></li>
 <li><code>组号</code>:<code>\b(\w+)\b\s+\1\1\b</code></li>
 </ul>
-<h2 id="常用正则"><a href="#常用正则" class="headerlink" title="常用正则"></a>常用正则</h2><ul>
-<li></li>
-</ul>
+<h2 id="常用正则"><a href="#常用正则" class="headerlink" title="常用正则"></a>常用正则</h2><p>*</p>
 ]]></content>
     
     <summary type="html">
@@ -314,7 +312,7 @@
     
     </summary>
     
-      <category term="java正则表达式" scheme="http://yoursite.com/categories/java%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
     
     
       <category term="正则表达式" scheme="http://yoursite.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
@@ -377,7 +375,7 @@
     <link href="http://yoursite.com/2016/11/14/guava-transform/"/>
     <id>http://yoursite.com/2016/11/14/guava-transform/</id>
     <published>2016-11-14T15:05:11.000Z</published>
-    <updated>2017-03-24T01:19:23.000Z</updated>
+    <updated>2017-05-04T08:34:03.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>google的guava提供了很方便的操作，特别是集合操作；<br>但今天遇到了个神坑，看了源码才搞定，这里通过源码来分享下；</p>
@@ -411,7 +409,7 @@
     
     </summary>
     
-      <category term="guava" scheme="http://yoursite.com/categories/guava/"/>
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
     
     
       <category term="guava" scheme="http://yoursite.com/tags/guava/"/>
@@ -427,7 +425,7 @@
     <link href="http://yoursite.com/2016/11/08/joda-collection/"/>
     <id>http://yoursite.com/2016/11/08/joda-collection/</id>
     <published>2016-11-08T14:04:04.000Z</published>
-    <updated>2016-11-10T14:44:17.000Z</updated>
+    <updated>2017-05-04T08:34:00.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>joda-collection官网说明了是提供jdk和guava之外的collection操作，所以提供了Grid操作；<br>Grid顾名思义就是网格的意思，也就是有个<strong>(x,y)</strong>坐标确定一个元素；</p>
@@ -476,7 +474,7 @@
     
     </summary>
     
-      <category term="joda" scheme="http://yoursite.com/categories/joda/"/>
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
     
     
       <category term="joda-collection" scheme="http://yoursite.com/tags/joda-collection/"/>
