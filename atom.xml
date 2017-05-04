@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-04T12:13:50.000Z</updated>
+  <updated>2017-05-04T12:16:26.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/05/04/git-storage/"/>
     <id>http://yoursite.com/2017/05/04/git-storage/</id>
     <published>2017-05-04T11:27:44.000Z</published>
-    <updated>2017-05-04T12:13:50.000Z</updated>
+    <updated>2017-05-04T12:16:26.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>现在项目基本都采用git来进行版本控制，最近比较好奇git的存储机制到底是怎么样的，研究了一下</p>
@@ -56,7 +56,6 @@
 </ul>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
 <li>git对文件的比对是通过文件内容的SHA-1消息摘要进行对比是否有更改，所以速度会非常快；</li>
-<li>git对第二次保存只会保存修改的部分，并通过对源文件的压缩，真正提交的是压缩后的blob，所以push速度也非常快</li>
 </ul>
 </li>
 </ul>

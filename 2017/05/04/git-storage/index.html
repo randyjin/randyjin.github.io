@@ -118,7 +118,7 @@ SHA-1算法：两个不同的内容进行计算出来的值（消息摘要）理
 
 git的存储机制详解
 先介绍下git的一个命令：">
-<meta property="og:updated_time" content="2017-05-04T12:13:50.000Z">
+<meta property="og:updated_time" content="2017-05-04T12:16:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git的存储机制">
 <meta name="twitter:description" content="现在项目基本都采用git来进行版本控制，最近比较好奇git的存储机制到底是怎么样的，研究了一下
@@ -402,7 +402,6 @@ git的存储机制详解
 </ul>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
 <li>git对文件的比对是通过文件内容的SHA-1消息摘要进行对比是否有更改，所以速度会非常快；</li>
-<li>git对第二次保存只会保存修改的部分，并通过对源文件的压缩，真正提交的是压缩后的blob，所以push速度也非常快</li>
 </ul>
 </li>
 </ul>
